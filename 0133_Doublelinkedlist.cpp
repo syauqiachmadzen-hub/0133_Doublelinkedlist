@@ -77,6 +77,9 @@ public:
             cout << "\nList is empty" << endl;
             return;
         }
-        
+
+        cout << "\Enter the roll number of the student whose is to be deleted: ";
+        int roll;
+        cin >> rollNo;
     }
 }
