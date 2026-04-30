@@ -61,7 +61,7 @@ public:
             cout << "\nDuplicate roll numbers not allowed" << endl;
             return;
         }
-        newNode-> = current->next;
+        newNode->next = current->next;
         newNode->prev = current;
 
         if (current->next != NULL)
@@ -79,7 +79,7 @@ public:
         }
 
         cout << "\Enter the roll number of the student whose is to be deleted: ";
-        int roll;
+        int rollNo;
         cin >> rollNo;
 
         Node *current = START;
@@ -119,6 +119,11 @@ public:
             cout << "\nList is empty" << endl;
             return;
         }
-        
+
+        Node *currentNode = START;
+
+        cout << "\nRecords in ascending order of roll number are:\n";
+        int i = 0;
+        while (currentNode != NULL)
     }
 }
