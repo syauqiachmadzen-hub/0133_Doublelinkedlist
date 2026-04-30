@@ -152,10 +152,26 @@ public:
         cout << "\nRecords in descending order of roll number are:\n";
         while (currentNode != NULL)
         {
-            cout << i + 1 << ". " << currentNode->noMhs << " " << enndl;
+            cout << i + 1 << ". " << currentNode->noMhs << " " << endl;
 
-            currentNode = current->prev;
+            currentNode = currentNode->prev;
             i--;
         }
+    }
+
+    void searhData()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        int rollNo;
+        cout << "\nEnter the roll number to search: ";
+        cin >> rollNo;
+
+        Node *current = START;
+
     }
 }
