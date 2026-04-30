@@ -78,13 +78,13 @@ public:
             return;
         }
 
-        cout << "\Enter the roll number of the student whose is to be deleted: ";
+        cout << "\nEnter the roll number of the student whose is to be deleted: ";
         int rollNo;
         cin >> rollNo;
 
         Node *current = START;
 
-        while (current != NULL && current->noMhs != rollno)
+        while (current != NULL && current->noMhs != rollNo)
               current = current->next;
 
         if (current == NULL)
@@ -125,5 +125,11 @@ public:
         cout << "\nRecords in ascending order of roll number are:\n";
         int i = 0;
         while (currentNode != NULL)
+        {
+            cout << i + 1 << ". " << currentNode->noMhs << " " << endl;
+
+            currentNode = currentNode->next;
+            i++;
+        }
     }
 }
