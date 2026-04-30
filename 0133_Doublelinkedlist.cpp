@@ -81,5 +81,31 @@ public:
         cout << "\Enter the roll number of the student whose is to be deleted: ";
         int roll;
         cin >> rollNo;
+
+        Node *current = START;
+
+        while (current != NULL && current->noMhs != rollno)
+              current = current->next;
+
+        if (current == NULL)
+        {
+            cout << "Record not found" << endl;
+            return;
+        }
+        
+        if (current == START)
+        {
+            START = current->next;
+            if (START != NULL)
+                START->prev = NULL; 
+        }
+        else
+        {
+            current->prev->next = current->next;
+
+
+            if (current->next != NULL)
+                current->next->prev = current->prev;
+        }
     }
 }
